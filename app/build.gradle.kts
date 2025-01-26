@@ -51,7 +51,6 @@ dependencies {
 
     implementation (platform(libs.firebase.bom))
     implementation(libs.firebase.database.ktx)
-    implementation(libs.firebase.database)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
