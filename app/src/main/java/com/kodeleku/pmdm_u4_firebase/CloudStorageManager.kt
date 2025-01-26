@@ -65,7 +65,7 @@ class CloudStorageManager {
         // Creamos la variable que devolveremos
         var wasSuccess = true
         if(reference !=null){
-            refernce.delete().addOnFailureListener{
+            reference.delete().addOnFailureListener{
                 // Si falla devolvemos error
                 wasSuccess= false
             }.await()
