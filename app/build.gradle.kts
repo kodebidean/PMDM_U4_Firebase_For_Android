@@ -49,9 +49,20 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
 
+    // FIREBASE BoM
     implementation (platform(libs.firebase.bom))
+    // Firebase RealTime Database
     implementation(libs.firebase.database.ktx)
-    implementation(libs.androidx.lifecycle.runtime.ktx) // Lifecycle + Coroutine support
+    // Firebase Cloud Storage
+    implementation(libs.firebase.storage.ktx)
+    // Firebase Authentication
+    implementation(libs.firebase.auth.ktx)
+
+
+    // COROUTINES
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.firebase.storage)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
