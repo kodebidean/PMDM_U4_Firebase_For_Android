@@ -3,6 +3,7 @@ package com.kodeleku.pmdm_u4_firebase
 import android.net.Uri
 import android.util.Log
 import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.ListResult
 import com.google.firebase.storage.StorageReference
 import kotlinx.coroutines.tasks.await
 
@@ -40,4 +41,21 @@ class CloudStorageManager {
         return imageUrl
 
     }
+
+    suspend fun getAllImages(): List<String> {
+        // Accedemos al nodo de las imagenes de los anuncios
+        val advertisementReference = storageReference.child("advertisement")
+
+        // Creamos lista vacía para añadir los enlaces de las imagenes
+        val imageList = mutableListOf<String>()
+        // Pedimos el resultado de la referencia
+        val result: ListResult = advertisementReference.listAll().await()
+        // Iteramos la lista de items de la referencia una vez cargados con un forEach
+        result.items.forEach{ item ->
+            // Añadimos a la lista vacía de los enlaces de descarga de cada item
+            imageList.add(item.downloadUrl.toString())
+        }
+        return imageList
+    }
+
 }
