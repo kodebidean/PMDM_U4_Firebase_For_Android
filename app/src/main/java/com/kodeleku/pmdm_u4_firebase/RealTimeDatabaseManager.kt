@@ -63,5 +63,19 @@ class RealTimeDatabaseManager {
 
     }
 
+    // ACTUALIZAR DATOS
+    fun updateFavourite(favourite: FavouriteAdvertisement){
+        val connection: DatabaseReference = databaseReference.child("faves")
+        // Actualizamos el favorito seleccionado por su ID mediante .setValue() sobrescribiendo la información
+        connection.child(favourite.advertisementId).setValue(favourite)
+    }
+
+    // ELIMINAR DATOS
+    fun removeFavourite(favouriteId: String){
+        val connection: DatabaseReference = databaseReference.child("faves")
+        // Borramos el favorito seleccionado por su ID
+        connection.child(favouriteId).removeValue()
+    }
+
 
 }

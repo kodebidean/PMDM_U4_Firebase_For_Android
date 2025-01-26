@@ -51,7 +51,7 @@ dependencies {
 
     implementation (platform(libs.firebase.bom))
     implementation(libs.firebase.database.ktx)
-
+    implementation(libs.androidx.lifecycle.runtime.ktx) // Lifecycle + Coroutine support
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
