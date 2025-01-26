@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "401312066733",
+    "project_id": "pmdm-u4-firebase",
+    "storage_bucket": "pmdm-u4-firebase.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:401312066733:android:062d5b57ea016364a8ea24",
+        "android_client_info": {
+          "package_name": "com.kodeleku.pmdm_u4_firebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3aA-mCuWUAYpFzFAjGZRhlDu0E4lAU_U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
